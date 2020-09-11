@@ -46,6 +46,9 @@
                                 <state key="normal" title="GET STARTED">
                                     <color key="titleColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
                                 </state>
+                                <connections>
+                                    <segue destination="2J2-Kn-Jjg" kind="showDetail" id="FbV-Yf-dHV"/>
+                                </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Find a team in your city &amp; dominate the league" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fRU-ey-5Wa">
                                 <rect key="frame" x="67" y="299" width="280" height="46.666666666666686"/>
@@ -91,11 +94,11 @@
             <objects>
                 <viewController id="2J2-Kn-Jjg" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="BoI-Bw-dec">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="716"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="desiredLeagueBG" translatesAutoresizingMaskIntoConstraints="NO" id="k5E-yU-jNS">
-                                <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="716"/>
                             </imageView>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="25" translatesAutoresizingMaskIntoConstraints="NO" id="Ut1-DI-YuU">
                                 <rect key="frame" x="20" y="143.33333333333334" width="374" height="200.00000000000003"/>
@@ -150,7 +153,7 @@
                                 </subviews>
                             </stackView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oBM-Vw-dBR" customClass="BorderButton" customModule="app_swoosh" customModuleProvider="target">
-                                <rect key="frame" x="20" y="666" width="374" height="50"/>
+                                <rect key="frame" x="20" y="646" width="374" height="50"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.40000000000000002" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="50" id="TGy-fQ-CXf"/>
@@ -160,12 +163,24 @@
                                     <color key="titleColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
                                 </state>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LET-u4-YPl">
+                                <rect key="frame" x="20" y="10" width="20" height="16"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="16" id="B8C-5n-I8C"/>
+                                    <constraint firstAttribute="width" constant="20" id="rFc-Aa-jiN"/>
+                                </constraints>
+                                <state key="normal" image="backButton"/>
+                                <connections>
+                                    <segue destination="J21-b9-zHi" kind="unwind" unwindAction="unwindFromSkillVCWithUnwindSegue:" id="bpK-Gl-Fy6"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
                             <constraint firstItem="oBM-Vw-dBR" firstAttribute="leading" secondItem="A39-oX-Nta" secondAttribute="leading" constant="20" id="0e5-Ap-XbU"/>
                             <constraint firstItem="k5E-yU-jNS" firstAttribute="leading" secondItem="A39-oX-Nta" secondAttribute="leading" id="2SB-OU-S8L"/>
                             <constraint firstItem="k5E-yU-jNS" firstAttribute="top" secondItem="A39-oX-Nta" secondAttribute="top" id="4jL-cZ-L0A"/>
+                            <constraint firstItem="LET-u4-YPl" firstAttribute="top" secondItem="A39-oX-Nta" secondAttribute="top" constant="10" id="JvM-WM-jYQ"/>
                             <constraint firstItem="pdE-Gz-NZM" firstAttribute="leading" secondItem="A39-oX-Nta" secondAttribute="leading" constant="20" id="Kad-In-N1U"/>
                             <constraint firstItem="k5E-yU-jNS" firstAttribute="bottom" secondItem="A39-oX-Nta" secondAttribute="bottom" id="OpQ-xC-ifJ"/>
                             <constraint firstItem="pdE-Gz-NZM" firstAttribute="top" secondItem="A39-oX-Nta" secondAttribute="top" constant="20" id="Otm-ec-wbT"/>
@@ -176,12 +191,14 @@
                             <constraint firstItem="k5E-yU-jNS" firstAttribute="trailing" secondItem="A39-oX-Nta" secondAttribute="trailing" id="lbp-Qk-Fb0"/>
                             <constraint firstItem="A39-oX-Nta" firstAttribute="trailing" secondItem="pdE-Gz-NZM" secondAttribute="trailing" constant="20" id="pXq-NL-fJu"/>
                             <constraint firstItem="A39-oX-Nta" firstAttribute="trailing" secondItem="oBM-Vw-dBR" secondAttribute="trailing" constant="20" id="rpz-Uj-kVA"/>
+                            <constraint firstItem="LET-u4-YPl" firstAttribute="leading" secondItem="A39-oX-Nta" secondAttribute="leading" constant="20" id="wPp-IG-h3g"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="A39-oX-Nta"/>
                     </view>
                     <navigationItem key="navigationItem" id="JSQ-RP-tmE"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Jha-QR-qGx" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <exit id="J21-b9-zHi" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
             <point key="canvasLocation" x="771.01449275362324" y="138.58695652173915"/>
         </scene>
@@ -275,6 +292,7 @@
         </scene>
     </scenes>
     <resources>
+        <image name="backButton" width="29" height="24"/>
         <image name="beginnerBallerBG" width="414" height="736"/>
         <image name="desiredLeagueBG" width="414" height="736"/>
         <image name="swooshLogo" width="119" height="20"/>
