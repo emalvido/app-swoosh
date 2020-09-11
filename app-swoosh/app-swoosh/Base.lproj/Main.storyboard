@@ -109,6 +109,9 @@
                                         <state key="normal" title="Mens">
                                             <color key="titleColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
                                         </state>
+                                        <connections>
+                                            <action selector="onMensTapped:" destination="2J2-Kn-Jjg" eventType="touchUpInside" id="Rz3-VT-Ft5"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vdd-lR-xvI" customClass="BorderButton" customModule="app_swoosh" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="75" width="374" height="50"/>
@@ -120,6 +123,9 @@
                                         <state key="normal" title="Womens">
                                             <color key="titleColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
                                         </state>
+                                        <connections>
+                                            <action selector="onWomensTapped:" destination="2J2-Kn-Jjg" eventType="touchUpInside" id="ezO-Xk-gFG"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hkQ-3k-IFY" customClass="BorderButton" customModule="app_swoosh" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="149.99999999999997" width="374" height="50"/>
@@ -131,6 +137,9 @@
                                         <state key="normal" title="Co-ed">
                                             <color key="titleColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
                                         </state>
+                                        <connections>
+                                            <action selector="onCoedTapped:" destination="2J2-Kn-Jjg" eventType="touchUpInside" id="5Qw-y3-nQg"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                             </stackView>
@@ -148,7 +157,7 @@
                                     </label>
                                 </subviews>
                             </stackView>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oBM-Vw-dBR" customClass="BorderButton" customModule="app_swoosh" customModuleProvider="target">
+                            <button opaque="NO" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oBM-Vw-dBR" customClass="BorderButton" customModule="app_swoosh" customModuleProvider="target">
                                 <rect key="frame" x="20" y="646" width="374" height="50"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.40000000000000002" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
@@ -196,6 +205,7 @@
                     </view>
                     <navigationItem key="navigationItem" id="JSQ-RP-tmE"/>
                     <connections>
+                        <outlet property="nextBtn" destination="oBM-Vw-dBR" id="jP0-QD-mX2"/>
                         <segue destination="ONz-gh-1uP" kind="show" identifier="SkillVCSegue" id="ZFg-LI-2TQ"/>
                     </connections>
                 </viewController>
