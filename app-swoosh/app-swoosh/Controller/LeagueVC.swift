@@ -42,4 +42,11 @@ class LeagueVC: UIViewController {
         player.desiredLeague = leagueType
         nextBtn.isEnabled = true
     }
+    
+    // This function is ALWAYS called before viewDidLoad in the destination viewcontroller
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if let skillVC = segue.destination as? SkillVC {
+            skillVC.player = player
+        }
+    }
 }
